@@ -21,7 +21,7 @@
     margin: auto;
     border-radius: 40px;
     background: #ED5565;
-    box-shadow: 0px 20px 40px rgba(0,0,0,0.4);
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
 
 .bar-title {
@@ -32,3 +32,4 @@
     bottom: 0;
     left: 40px;
 }
+
