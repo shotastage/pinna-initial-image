@@ -2,6 +2,8 @@
 var map;
 // デフォルトズーム
 var zoom = 18;
+// デフォルトの座標
+var latlng = new google.maps.LatLng(35.388471, 139.427608);
 
 
 // Mapの初期化
@@ -23,7 +25,6 @@ document.getElementById("map_minus").addEventListener("click", function () {
 
 
 function initialize() {
-  var latlng = new google.maps.LatLng(35.388471, 139.427608);
   var myOptions = {
     zoom: zoom, /*拡大比率*/
     center: latlng, /*表示枠内の中心点*/
