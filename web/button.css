@@ -1,4 +1,10 @@
 
+.button-area {
+    position: absolute;
+    bottom: 30px;
+}
+
+
 .map-plus, .map-minus {
     position: relative;
     z-index: 3;
