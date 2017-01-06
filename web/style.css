@@ -9,17 +9,16 @@
 
 
 /* バーのスタイル */
-.card {
+.tabbar {
     z-index: 1;
     display: flex;
     position: fixed;
-    top: 0;
     bottom: 0;
-    height: 92vh;
+    height: 70px;
     right: 0;
-    width: 300px;;
+    width: 100%;;;
     margin: auto;
-    background: #48CFAD;
+    background: #f3f3f3;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
