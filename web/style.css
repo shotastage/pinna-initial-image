@@ -12,15 +12,26 @@
 .bar {
     z-index: 1;
     display: flex;
-    position: relative;
-    top: 0;
+    position: fixed;
+    bottom: 0;
+    height: 80px;
     left: 0;
     right: 0;
-    height: 65px;
-    width: 100%;
+    width: 95vw;
     margin: auto;
-    background: #ED5565;
-    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    background: transparent;
+}
+
+.bar:before {
+    position: fixed;
+    bottom: 0;
+    content: "";
+    display: inline-block;
+    height: 80px;
+    width: 100%;
+    -webkit-filter: blur(8px);
+	-moz-filter: blur(8px);
+	filter: blur(8px);
 }
 
 .bar-title {
@@ -31,4 +42,3 @@
     bottom: 0;
     left: 40px;
 }
-
