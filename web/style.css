@@ -13,13 +13,12 @@
     z-index: 1;
     display: flex;
     position: relative;
-    top: 20px;
+    top: 0;
     left: 0;
     right: 0;
     height: 65px;
-    width: 97%;
+    width: 100%;
     margin: auto;
-    border-radius: 40px;
     background: #ED5565;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
