@@ -1,0 +1,8 @@
+/* Mapのスタイル */
+#map_canvas {
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+}
