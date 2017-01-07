@@ -15,7 +15,6 @@ document.getElementById("map_plus").addEventListener("click", function () {
   zoom = zoom + 1;
   map.setZoom(zoom);
 }, false);
-
 // フェードクリック
 document.getElementById("map_minus").addEventListener("click", function () {
   zoom = zoom - 1;
@@ -24,54 +23,37 @@ document.getElementById("map_minus").addEventListener("click", function () {
 
 
 
-createMapPin(35.388471, 139.427608, "テスト");
+
+
 
 //イニシャライザ
 function initialize() {
-  var mapStyle = [
-    {
-        "featureType": "water",
-        "elementType": "all",
-        "stylers": [
-            {
-                "hue": "#7fc8ed"
-            },
-            {
-                "saturation": 55
-            },
-            {
-                "lightness": -6
-            },
-            {
-                "visibility": "on"
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "labels",
-        "stylers": [
-            {
-                "hue": "#7fc8ed"
-            },
-            {
-                "saturation": 55
-            },
-            {
-                "lightness": -6
-            },
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "poi.park",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "hue": "#83cead"
-            },
+    var mapStyle = [
+        {
+            "featureType": "water",
+            "elementType": "all",
+            "stylers": [
+                { "hue": "#7fc8ed" },
+                { "saturation": 55 },
+                { "lightness": -6 },
+                { "visibility": "on" }
+            ]
+        },
+        {
+            "featureType": "water",
+            "elementType": "labels",
+            "stylers": [
+                { "hue": "#7fc8ed" },
+                { "saturation": 55 },
+                { "lightness": -6  },
+                { "visibility": "off" }
+            ]
+        },
+        {
+            "featureType": "poi.park",
+            "elementType": "geometry",
+            "stylers": [
+                { "hue": "#83cead" },
             {
                 "saturation": 1
             },
@@ -212,16 +194,14 @@ function initialize() {
 ]
 
 
-
-
-  var Options = {
-    zoom: zoom, /*拡大比率*/
-    center: latlng, /*表示枠内の中心点*/
-    //mapTypeId: google.maps.MapTypeId.ROADMAP,/*表示タイプの指定*/
-    disableDefaultUI: true, /* デフォルトのUIを無効化 */
-    styles: mapStyle
-  };
-  map = new google.maps.Map(document.getElementById('map_canvas'), Options);
+    var Options = {
+        zoom: zoom, /*拡大比率*/
+        center: latlng, /*表示枠内の中心点*/
+        //mapTypeId: google.maps.MapTypeId.ROADMAP,/*表示タイプの指定*/
+        disableDefaultUI: true, /* デフォルトのUIを無効化 */
+        styles: mapStyle
+    };
+    map = new google.maps.Map(document.getElementById('map_canvas'), Options);
 }
 
 
