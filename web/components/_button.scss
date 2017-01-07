@@ -1,70 +1,90 @@
-
-.button-area {
-    position: absolute;
-    bottom: 30px;
-}
-
-
-.map-plus, .map-minus {
-    display: inline-block;
-    position: relative;
-    z-index: 3;
-    height: 45px;
-    line-height: 36px;
-    width: 45px;
-    border-radius: 28px;
-    margin: 10px;
-    background: none;
-    border: solid 4px #5ac8fa;
-    color: #5ac8fa;
-    text-align: center;
-    font-size: 18px;
-    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
-    transition: .3s;
-    -webkit-appearance: none;
-}
+//Colours
+$green: #2ecc71;
+$red: #e74c3c;
+$blue: #3498db;
+$yellow: #f1c40f;
+$purple: #8e44ad;
+$turquoise: #1abc9c;
 
 
-.map-plus:hover, .map-minus:hover {
-    box-shadow: 0px 20px 40px rgba(0,0,0,0.4);
-    transform: scale(1.05,1.05);
-}
-
-
-.button-post {
-    /* Reset */
-    border: none;
-    cursor: pointer;
-    outline: none;
-    padding: 0;
-
-    display: inline-block;
-    position: relative;
+// Basic Button Style
+.btn {
     z-index: 2;
-    width: 100px;
-    height: 100px;
-    line-height: 60px;
-    border-radius: 8px;
-    background: blue;
-    color: #fff;
-    font-size: 60px;
+    box-sizing: border-box;
+    appearance: none;
+    background: #fff;
+    border: 2px solid $red;
+    border-radius: 0.6em;
+    color: $red;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
     text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 
+    &:hover,
+    &:focus {
+        color: #fff;
+        outline: 0;
+    }
 }
 
-.button-play {
-    display: inline-block;
+
+//BUTTON 2
+.second {
+    border-radius: 3em;
+    border-color: $turquoise;
+    color: #fff;
+    background: {
+        image: -webkit-linear-gradient(left, transparentize($turquoise, 0.4), transparentize($turquoise, 0.4) 5%, $turquoise 5%, $turquoise 10%, transparentize($turquoise, 0.4) 10%, transparentize($turquoise, 0.4) 15%, $turquoise 15%, $turquoise 20%, transparentize($turquoise, 0.4) 20%, transparentize($turquoise, 0.4) 25%, $turquoise 25%, $turquoise 30%, transparentize($turquoise, 0.4) 30%, transparentize($turquoise, 0.4) 35%, $turquoise 35%, $turquoise 40%, transparentize($turquoise, 0.4) 40%, transparentize($turquoise, 0.4) 45%, $turquoise 45%, $turquoise 50%, transparentize($turquoise, 0.4) 50%, transparentize($turquoise, 0.4) 55%, $turquoise 55%, $turquoise 60%, transparentize($turquoise, 0.4) 60%, transparentize($turquoise, 0.4) 65%, $turquoise 65%, $turquoise 70%, transparentize($turquoise, 0.4) 70%, transparentize($turquoise, 0.4) 75%, $turquoise 75%, $turquoise 80%, transparentize($turquoise, 0.4) 80%, transparentize($turquoise, 0.4) 85%, $turquoise 85%, $turquoise 90%, transparentize($turquoise, 0.4) 90%, transparentize($turquoise, 0.4) 95%, $turquoise 95%, $turquoise 100%);
+        image: -o-linear-gradient(left, transparentize($turquoise, 0.4), transparentize($turquoise, 0.4) 5%, $turquoise 5%, $turquoise 10%, transparentize($turquoise, 0.4) 10%, transparentize($turquoise, 0.4) 15%, $turquoise 15%, $turquoise 20%, transparentize($turquoise, 0.4) 20%, transparentize($turquoise, 0.4) 25%, $turquoise 25%, $turquoise 30%, transparentize($turquoise, 0.4) 30%, transparentize($turquoise, 0.4) 35%, $turquoise 35%, $turquoise 40%, transparentize($turquoise, 0.4) 40%, transparentize($turquoise, 0.4) 45%, $turquoise 45%, $turquoise 50%, transparentize($turquoise, 0.4) 50%, transparentize($turquoise, 0.4) 55%, $turquoise 55%, $turquoise 60%, transparentize($turquoise, 0.4) 60%, transparentize($turquoise, 0.4) 65%, $turquoise 65%, $turquoise 70%, transparentize($turquoise, 0.4) 70%, transparentize($turquoise, 0.4) 75%, $turquoise 75%, $turquoise 80%, transparentize($turquoise, 0.4) 80%, transparentize($turquoise, 0.4) 85%, $turquoise 85%, $turquoise 90%, transparentize($turquoise, 0.4) 90%, transparentize($turquoise, 0.4) 95%, $turquoise 95%, $turquoise 100%);
+        image: linear-gradient(to right, transparentize($turquoise, 0.4), transparentize($turquoise, 0.4) 5%, $turquoise 5%, $turquoise 10%, transparentize($turquoise, 0.4) 10%, transparentize($turquoise, 0.4) 15%, $turquoise 15%, $turquoise 20%, transparentize($turquoise, 0.4) 20%, transparentize($turquoise, 0.4) 25%, $turquoise 25%, $turquoise 30%, transparentize($turquoise, 0.4) 30%, transparentize($turquoise, 0.4) 35%, $turquoise 35%, $turquoise 40%, transparentize($turquoise, 0.4) 40%, transparentize($turquoise, 0.4) 45%, $turquoise 45%, $turquoise 50%, transparentize($turquoise, 0.4) 50%, transparentize($turquoise, 0.4) 55%, $turquoise 55%, $turquoise 60%, transparentize($turquoise, 0.4) 60%, transparentize($turquoise, 0.4) 65%, $turquoise 65%, $turquoise 70%, transparentize($turquoise, 0.4) 70%, transparentize($turquoise, 0.4) 75%, $turquoise 75%, $turquoise 80%, transparentize($turquoise, 0.4) 80%, transparentize($turquoise, 0.4) 85%, $turquoise 85%, $turquoise 90%, transparentize($turquoise, 0.4) 90%, transparentize($turquoise, 0.4) 95%, $turquoise 95%, $turquoise 100%);;
+        position: 0 0;
+        size: 100%;
+    }
+    transition: background 300ms ease-in-out;
+  
+    &:hover {
+        background-position: 100px;
+    }
+}
+
+
+
+.post-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 5;
+}
+
+.start {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    font-size: 2rem;
+    padding: 0.5em 2.1em;
+}
+
+.register-button {
+    // background: $yellow;
+    border-color: $yellow;
+    color: #fff;
     background: transparent;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    padding: 0;
-    width: 60px;
-    height: 60px;
-    line-height: 57px;
-    border-radius: 30px;
-    appearance: none; 
-    border: solid 3.5px #DA4453;
-    color: #DA4453;
-    font-size: 35px;
+    transition: background 300ms ease-in-out;
+  
+    &:hover {
+        background-position: 0;
+    }
 }
