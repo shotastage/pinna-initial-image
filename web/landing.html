@@ -1,9 +1,10 @@
+{% load staticfiles %}
 <!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
     <title>情報基礎2 ミニプロ</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
     
     <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
 
@@ -20,8 +21,8 @@
 
     <!-- Map描画エリア -->
     <div id="map_canvas"></div>
-    <script src="mapstyle.js"></script>
-    <script src="script.js"></script>
+    <script src="{% static 'mapstyle.js' %}"></script>
+    <script src="{% static 'script.js' %}"></script>
     <script>
         zoom = 16;
     </script>
