@@ -1,29 +1,49 @@
-
-.card {
-    display: flex;
-    flex-direction: column;
+form {
     position: absolute;
-    z-index: 100;
     left: 0;
     right: 0;
-    top: 0;
-    bottom: 0;
     margin: auto;
-    width: 500px;
-    height: 500px;
-    background: #fff;
-    border-radius: 6px;
-    box-shadow: 0px 20px 40px rgba(0,0,0,0.4);
+    top: 140px;
+    bottom: 0;
     text-align: center;
+}
 
-    h1 {
-        position: absolute;
-        top: 20px;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        color: #333;
-        font-size: 70px;
+.login {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 100px;
+}
+
+.center {
+    text-align: center;
+}
+
+.desc {
+    color: #fff;
+}
+
+.form {
+    // Reset default styles
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    -webkit-appearance: none; 
+    -moz-apperance: none;
+    // Styles
+    color: #fff;
+    height: 50px;
+    width: 400px;
+    background: rgba(0,0,0,0.3);
+    border-left: solid 20px rgba(0,0,0,0);
+    &:focus {
+        font-size: 20px;
     }
+    font-weight: 800;
+}
+
+
+.msg-error {
+    color: #DA4453;
 }

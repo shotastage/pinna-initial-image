@@ -14,9 +14,7 @@
 <body>
 
     <div class="landing-contents">
-        <a class="noneStyle" href="/">
-            <h1 class="landing-title">PINNA</h1>
-        </a>
+        <h1 class="landing-title">PINNA</h1>
       
         {% if form.errors %}
             <p class="msg-error center">ユーザー名かパスワードが違います。</p>
@@ -27,15 +25,15 @@
         <form action="{% url 'login' %}" method="post" role="form">{% csrf_token %}
             <p class="user">
                 <label for="id_username"></label>
-                <input id="id_username" class="form" type="text" placeholder="USER NAME" name="username" autofocus required/>
+                <input id="id_username" class="form" type="text" placeholder="ユーザー名" name="username" autofocus required/>
             </p>
             <p class="pass">
                 <label for="id_password"></label>
-                <input id="id_password" class="form"  name="password" type="password" placeholder="PASSWORD" required/>
+                <input id="id_password" class="form"  name="password" type="password" placeholder="パスワード" required/>
             </p>
             <p class="submit">
                 <div class="login">
-                    <button type="submit" class="btn second start">LOGIN</button>
+                    <button type="submit" class="btn second start">REGISTER</button>
                 </div>
             </p>
             <input name="next" type="hidden" value="{{ next }}"/>
