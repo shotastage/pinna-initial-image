@@ -14,31 +14,30 @@
 <body>
 
     <div class="landing-contents">
-        <a class="noneStyle">
+        <a class="noneStyle" href="/">
             <h1 class="landing-title">PINNA</h1>
         </a>
 
         {% if error == "empty" %}
-            <p class="msg-error">全ての項目を入力してください。</p>
+            <p class="msg-error center">全ての項目を入力してください。</p>
         {% elif error == "doubleEmail" %}
-            <p class="msg-error">メールアドレスが既に登録されています。</p>
+            <p class="msg-error center">メールアドレスが既に登録されています。</p>
         {% elif error == "doubleUser" %}
-            <p class="msg-error">ユーザー名は既に使われています。</p>
+            <p class="msg-error center">ユーザー名は既に使われています。</p>
         {% elif error == "overflow" %}
-            <p class="msg-error">150文字以下にしてください。</p>
+            <p class="msg-error center">150文字以下にしてください。</p>
         {% elif error == "invaildEmail" %}
-            <p class="msg-error">不正なメールアドレスです。</p>
+            <p class="msg-error center">不正なメールアドレスです。</p>
         {% elif error == "invalidPass" %}
-            <p class="msg-error">パスワードは8桁以上設定してください。</p>
-        {% elif error == "notAgree" %}
-            <p class="msg-error">規約に同意できない場合はご利用いただけません。</p>
+            <p class="msg-error center">パスワードは8桁以上設定してください。</p>
         {% else %}
             {% if form.errors %}
-                <p class="msg-error">登録に失敗しました。もう一度試してください。</p>
+                <p class="msg-error center">登録に失敗しました。もう一度試してください。</p>
             {% else %}
-                <p>情報を入力して登録してください。</p>
+                <p class="center desc">情報を入力して登録してください。</p>
             {% endif %}
         {% endif %}
+
         <form action="{% url 'signup' %}" method="post" role="form">{% csrf_token %}
             <p class="mail">
                 <label for="id_email">
@@ -49,16 +48,16 @@
                 <input class="form" type="username" name="username" placeholder="ユーザー名" required/>
             </p>
             <p class="pass">
-                <label for="id_password"><input class="form" type="password" name="password" placeholder="パスワード" required/>
+                <label for="id_password">
+                <input class="form" type="password" name="password" placeholder="パスワード" required/>
             </p>
             <p class="submit">
-	            <div class="login">
+	            <div class="signup-btn">
                     <button type="submit" class="btn second start">REGISTER</button>
                 </div>
             </p>
             <input name="next" type="hidden" value="{{ next }}"/>
         </form>
-
     </div>
 
     <!-- Map描画エリア -->

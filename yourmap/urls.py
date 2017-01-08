@@ -19,6 +19,6 @@ from django.contrib import admin
 from yourmap.view import LandingView
 
 urlpatterns = [
-    url(r'^$', LandingView.as_view(), name='index'),
-    url(r'^auth/', include('account.urls')),
+    url(r'^', include('account.urls')),
+    url(r'^', LandingView.as_view(), name='index'),
 ]

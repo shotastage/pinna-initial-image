@@ -488,6 +488,12 @@ form {
   left: 0;
   bottom: 100px; }
 
+.signup-btn {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 75px; }
+
 .center {
   text-align: center; }
 

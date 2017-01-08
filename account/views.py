@@ -12,9 +12,8 @@ class Signup(View):
     """ Signup View Controller """
     def get(self, request):
         """ Serve signup view """
-        title = "サインアップ"
-        return render(request, 'signup.html')
-        
+        return render(request, 'auth/signup.html')
+
     def post(self, request):
         """ Serve signup method """
         # Get POST Data
@@ -46,35 +45,35 @@ class Signup(View):
         if "on" not in agree:
             error = "NotAgree"
         if error == "empty":
-            return render(request, 'signup.html', {
-                'error': "empty", 'subtitle': "サインアップ"
+            return render(request, 'auth/signup.html', {
+                'error': "empty",
             })
         elif error == "overflow":
-            return render(request, 'signup.html', {
-                'error': "overflow", 'subtitle': "サインアップ"
+            return render(request, 'auth/signup.html', {
+                'error': "overflow",
             })
         elif error == "invalidmail":
-            return render(request, 'signup.html', {
-                'error': "invalidEmail", 'subtitle': "サインアップ"
+            return render(request, 'auth/signup.html', {
+                'error': "invalidEmail",
             })
         elif error == "invalidpass":
-            return render(request, 'signup.html', {
-                'error': "invalidPass", 'subtitle': "サインアップ"
+            return render(request, 'auth/signup.html', {
+                'error': "invalidPass",
             })
         elif error == "ExistsUser":
-            return render(request, 'signup.html', {
-                'error': "doubleUser", 'subtitle': "サインアップ"
+            return render(request, 'auth/signup.html', {
+                'error': "doubleUser",
             })
         elif error == "ExistsMail":
-            return render(request, 'signup.html', {
-                'error': "doubleEmail", 'subtitle': "サインアップ"
+            return render(request, 'auth/signup.html', {
+                'error': "doubleEmail",
             })
-        elif error == "NotAgree":
-            return render(request, 'signup.html', {
-                'error': "notAgree", 'subtitle': "サインアップ"
-            })
+        #elif error == "NotAgree":
+        #    return render(request, 'auth/signup.html', {
+        #        'error': "notAgree",
+        #    })
         else:
             # Create user and redirect to login screen.
             user = User.objects.create_user(username, email, password)
             user.save()
-            return HttpResponseRedirect('/auth/')
+            return HttpResponseRedirect('/login/')
