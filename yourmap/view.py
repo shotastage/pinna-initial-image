@@ -6,12 +6,15 @@ from django.http import HttpResponseRedirect
 
 class LandingView(View):
     def get(self, request):
-        return render(request, 'landing.html')
+        if request.user.is_authenticated:
+            return render(request, 'index.html')
+        else:
+            return render(request, 'landing.html')
 
     def post(self):
         pass
 
 
-class MainView(View):
+class SignUpView(View):
     def get(self, request):
-        return render(request, 'index.html')
+        return render(request, 'signup.html')

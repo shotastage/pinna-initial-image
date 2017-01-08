@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from yourmap.view import LandingView
+from yourmap.view import LandingView, SignUpView
 
 urlpatterns = [
     url(r'^$', LandingView.as_view(), name='index'),
-    url(r'^signup/', ),
+    url(r'^signup/', SignUpView.as_view()),
 ]

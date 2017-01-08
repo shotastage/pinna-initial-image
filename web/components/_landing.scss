@@ -9,10 +9,19 @@
     background: rgba(0,0,0,0.5);
 }
 
- .landing-title {
+.landing-title {
     position: relative;
     text-align: center;
     color: #fff;
     font-size: 140px;
     font-family: 'Monoton', cursive;
+    margin: 7px;
+    margin-top: 80px;
+}
+
+.landing-description {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
 }
