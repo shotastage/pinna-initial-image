@@ -485,7 +485,8 @@ template {
   margin: auto;
   width: 500px;
   height: 500px;
-  background: rgba(0, 0, 0, 0.3);
+  background: #fff;
+  border-radius: 6px;
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
   text-align: center; }
   .card h1 {
@@ -495,7 +496,7 @@ template {
     left: 0;
     right: 0;
     margin: auto;
-    color: #fff;
+    color: #333;
     font-size: 70px; }
 
 input {

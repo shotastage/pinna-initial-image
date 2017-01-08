@@ -4,11 +4,14 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss style.scss style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "author": "Shota Shimazu, Satoshi Hirano",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.1.1"
+    "node-sass": "^4.1.1",
+    "nodemon": "^1.11.0"
   }
 }
