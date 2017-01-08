@@ -13,8 +13,3 @@ class LandingView(View):
 
     def post(self):
         pass
-
-
-class SignUpView(View):
-    def get(self, request):
-        return render(request, 'signup.html')
