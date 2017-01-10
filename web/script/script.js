@@ -2,8 +2,8 @@
 var map;
 // デフォルトズーム
 var zoom = 15;
-// デフォルトの座標 35.659112, 139.703349
-var latlng = new google.maps.LatLng(35.659112, 139.703349);
+// デフォルトの座標 35.658513, 139.701504
+var latlng = new google.maps.LatLng(35.658513, 139.701504);
 
 
 // Mapの初期化

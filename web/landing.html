@@ -19,8 +19,10 @@
 
     <!-- Map描画エリア -->
     <div id="map_canvas"></div>
-    <script src="{% static 'mapstyle.js' %}"></script>
-    <script src="{% static 'script.js' %}"></script>
+
+
+    
+    {% include 'script.html'%}
     <script>
         zoom = 16;
     </script>
