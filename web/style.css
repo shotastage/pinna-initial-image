@@ -403,6 +403,21 @@ template {
 [hidden] {
   display: none; }
 
+@font-face {
+  font-family: 'Monoton';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Monoton"), local("Monoton-Regular"), url(https://fonts.gstatic.com/s/monoton/v6/E1qpC-_4m0LngvlMPmKrlgLUuEpTyoUstqEm5AMlJo4.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Comfortaa"), local("Comfortaa-Regular"), url(https://fonts.gstatic.com/s/comfortaa/v7/qLBu5CQmSMt1H43OiWJ77bO3LdcAZYWl9Si6vvxL-qU.woff) format("woff"); }
+
+.noneStyle {
+  text-decoration: none; }
+
 .btn {
   z-index: 2;
   box-sizing: border-box;
@@ -561,6 +576,3 @@ input {
   text-align: center;
   color: #fff;
   font-size: 20px; }
-
-.noneStyle {
-  text-decoration: none; }

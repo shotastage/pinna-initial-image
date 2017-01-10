@@ -28,6 +28,13 @@ document.getElementById("map_minus").addEventListener("click", function () {
 }, false);
 
 
+// Create Pin クリック
+document.getElementById("create_pin").addEventListener("click", function () {
+  var create_pin = document.getElementById("create_window");
+  create_pin.classList.toggle("visible");
+}, false);
+
+
 
 
 
@@ -66,7 +73,35 @@ function createMapPin(lat, lng, pin_title) {
   marker.setMap(map);
 }
 
-// ユーティリティ
-function attachStyle(map) {
 
+
+
+// ユーティリティ
+
+// 位置情報の取得
+function getLocation() {
+  if( navigator.geolocation ) {
+    return false;
+  } else { 
+    console.log("Failed to get your location.");
+	  alert( "申し訳ございません。お使いの端末は位置情報の取得に対応していないか、その機能がOFFになっています。\n");
+    return false;
+  }
+}
+
+
+// 対応ブラウザ判定
+function judgeBrowser() {
+  var ua = U;
+
+  var supported_browser_list = [
+    "chrome",
+    "safari",
+    "firefox"
+  ];
+
+  var none_supported_browser_list = [
+    ""
+  ];
+  
 }
