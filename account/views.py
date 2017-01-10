@@ -42,7 +42,7 @@ class Signup(View):
             error = "ExistsUser"
         if User.objects.filter(email=email).exists():
             error = "ExistsMail"
-      
+
 
         if error == "empty":
             return render(request, 'auth/signup.html', {

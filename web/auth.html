@@ -16,15 +16,15 @@
 
     <div class="landing-contents">
         <a class="noneStyle" href="/">
-            <h1 class="landing-title">PINNA</h1>
+        <h1 class="landing-title">PINNA</h1>
         </a>
-      
+
         {% if form.errors %}
             <p class="msg-error center">ユーザー名かパスワードが違います。</p>
         {% else %}
             <p class="center desc">ユーザー名とパスワードを入力してください。</p>
         {% endif %}
-      
+
         <form action="{% url 'login' %}" method="post" role="form">{% csrf_token %}
             <p class="user">
                 <label for="id_username"></label>
@@ -46,7 +46,7 @@
 
     <!-- Map描画エリア -->
     <div id="map_canvas"></div>
-    
+
 
     {% include 'script.html'%}
     <script>
