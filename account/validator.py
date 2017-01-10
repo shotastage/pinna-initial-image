@@ -8,7 +8,7 @@ class Validation():
         for i in value:
             status = len(i) > 150
         return status
-   
+
     def empty(self, value):
         for i in value:
             if len(i) == 0:
@@ -21,7 +21,7 @@ class Validation():
         """ Valid E-mail adress"""
         # Temporary avoid
         return False
-        
+
     def password(self, passwd):
         """ Check password size """
         if len(passwd) < 8:

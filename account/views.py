@@ -21,10 +21,11 @@ class Signup(View):
         email = request.POST['email']
         username = request.POST['username']
         password = request.POST['password']
-        agree = request.POST.getlist('checkbox')
+
         # Error Status
         error = "None"
         # Registering Data Validation
+
         # Empty Check
         if VALID.empty([email, username, password]):
             error = "empty"
@@ -41,9 +42,8 @@ class Signup(View):
             error = "ExistsUser"
         if User.objects.filter(email=email).exists():
             error = "ExistsMail"
-        # Check license agreement
-        if "on" not in agree:
-            error = "NotAgree"
+      
+
         if error == "empty":
             return render(request, 'auth/signup.html', {
                 'error': "empty",
@@ -68,12 +68,9 @@ class Signup(View):
             return render(request, 'auth/signup.html', {
                 'error': "doubleEmail",
             })
-        #elif error == "NotAgree":
-        #    return render(request, 'auth/signup.html', {
-        #        'error': "notAgree",
-        #    })
         else:
             # Create user and redirect to login screen.
             user = User.objects.create_user(username, email, password)
             user.save()
             return HttpResponseRedirect('/login/')
+

@@ -10,6 +10,12 @@ var latlng = new google.maps.LatLng(35.659112, 139.703349);
 window.addEventListener('load', function () {
   initialize();
 }, false);
+
+window.addEventListener('hashchange', function () {
+  initialize();
+}, false);
+
+
 // ズームクリック
 document.getElementById("map_plus").addEventListener("click", function () {
   zoom = zoom + 1;
