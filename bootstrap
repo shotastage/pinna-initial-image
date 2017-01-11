@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+open /Applications/Postgres.app
+python3 ./manage.py runserver

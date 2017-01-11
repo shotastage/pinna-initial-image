@@ -688,10 +688,14 @@ perspective effects (not including the modals and the overlay).
     visibility: visible; }
   .pinna-modal .md-content {
     color: #fff;
-    background: #e74c3c;
+    background: #ED5565;
     position: relative;
     border-radius: 3px;
     margin: 0 auto; }
+  .pinna-modal .md-content-blue {
+    background: #4FC1E9; }
+  .pinna-modal .md-content-yellow {
+    background: #FFCE54; }
   .pinna-modal .md-content h3 {
     margin: 0;
     padding: 0.4em;

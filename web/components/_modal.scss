@@ -2,6 +2,9 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 
 
+$modal-bg-color: #fff;
+
+
 
 .pinna-modal {
 
@@ -141,10 +144,18 @@ perspective effects (not including the modals and the overlay).
 /* Content styles */
 .md-content {
 	color: #fff;
-	background: #e74c3c;
+	background: #ED5565;
 	position: relative;
 	border-radius: 3px;
 	margin: 0 auto;
+}
+
+.md-content-blue {
+	background: #4FC1E9;
+}
+
+.md-content-yellow {
+	background: #FFCE54;
 }
 
 .md-content h3 {
