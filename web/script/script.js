@@ -103,5 +103,5 @@ function judgeBrowser() {
   var none_supported_browser_list = [
     ""
   ];
-  
+
 }
