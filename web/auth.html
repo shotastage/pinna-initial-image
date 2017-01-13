@@ -25,7 +25,7 @@
             <p class="center desc">ユーザー名とパスワードを入力してください。</p>
         {% endif %}
 
-        <form action="{% url 'login' %}" method="post" role="form">{% csrf_token %}
+        <form class="auth-form" action="{% url 'login' %}" method="post" role="form">{% csrf_token %}
             <p class="user">
                 <label for="id_username"></label>
                 <input id="id_username" class="form" type="text" placeholder="USER NAME" name="username" autofocus required/>

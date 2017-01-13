@@ -536,7 +536,7 @@ form {
 .msg-error {
   color: #DA4453; }
 
-input {
+.auth-form input {
   position: relative;
   margin: 10px;
   padding: 0;
@@ -584,10 +584,10 @@ input {
   /* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
   /* General styles for the modal */
   /* 
-Styles for the html/body for special modal where we want 3d effects
-Note that we need a container wrapping all content on the page for the 
-perspective effects (not including the modals and the overlay).
-*/
+	Styles for the html/body for special modal where we want 3d effects
+	Note that we need a container wrapping all content on the page for the
+	perspective effects (not including the modals and the overlay).
+	*/
   /* Content styles */
   /* Individual modal styles with animations/transitions */
   /* Effect 7:  slide and stick to top */ }
@@ -599,7 +599,8 @@ perspective effects (not including the modals and the overlay).
     font-size: 100%;
     padding: 0;
     margin: 0; }
-  .pinna-modal .clearfix:before, .pinna-modal .clearfix:after {
+  .pinna-modal .clearfix:before,
+  .pinna-modal .clearfix:after {
     content: " ";
     display: table; }
   .pinna-modal .clearfix:after {
@@ -636,9 +637,6 @@ perspective effects (not including the modals and the overlay).
       font-size: 1.5em; }
     .pinna-modal .column:nth-child(2) {
       box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1); } }
-  @media screen and (max-width: 25em) {
-    .pinna-modal .codrops-icon span {
-      display: none; } }
   .pinna-modal .md-perspective,
   .pinna-modal .md-perspective body {
     height: 100%;
@@ -791,4 +789,30 @@ button {
 .btn-area {
   position: relative;
   margin: auto;
+  text-align: center; }
+
+.post-input {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  background: #fafbfc;
+  color: #333;
+  height: 45px;
+  width: 470px;
+  border-radius: 4px;
+  font-weight: 600;
+  padding-left: 20px; }
+
+.input-wrap {
+  position: relative;
+  margin: auto;
+  left: 0;
+  right: 0;
   text-align: center; }
