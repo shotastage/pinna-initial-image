@@ -11,5 +11,7 @@ class LandingView(View):
         else:
             return render(request, 'landing.html')
 
-    def post(self):
-        pass
+    def post(self, request):
+        post_pin = request.POST['post_pin']
+        print(post_pin)
+

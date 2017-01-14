@@ -490,7 +490,7 @@ template {
   height: 100vh;
   top: 0; }
 
-form {
+.basic-form {
   position: absolute;
   left: 0;
   right: 0;
@@ -536,23 +536,11 @@ form {
 .msg-error {
   color: #DA4453; }
 
-.auth-form input {
-  position: relative;
-  margin: 10px;
-  padding: 0;
-  background: none;
-  border: none;
-  border-radius: 0;
-  outline: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: rgba(0, 0, 0, 0.18);
-  top: 150px;
-  height: 55px;
-  width: 400px;
-  color: #fff;
-  font-weight: 800; }
+.auth-form {
+  position: absolute;
+  top: 300px;
+  margin: auto;
+  width: 40%; }
 
 .landing-contents {
   position: absolute;
@@ -791,28 +779,113 @@ button {
   margin: auto;
   text-align: center; }
 
-.post-input {
-  margin: 0;
-  padding: 0;
-  background: none;
-  border: none;
-  border-radius: 0;
-  outline: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  position: relative;
-  background: #fafbfc;
-  color: #333;
-  height: 45px;
-  width: 470px;
-  border-radius: 4px;
-  font-weight: 600;
-  padding-left: 20px; }
-
-.input-wrap {
-  position: relative;
+.btn-map-area {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
   margin: auto;
-  left: 0;
-  right: 0;
-  text-align: center; }
+  text-align: center;
+  bottom: 30px;
+  left: 10px; }
+
+.map-button {
+  height: 58px;
+  width: 58px;
+  font-weight: 700;
+  font-size: 30px; }
+
+.input-margin {
+  height: 20px; }
+
+.post-input {
+  position: relative;
+  margin-bottom: 45px;
+  /* form starting stylings ------------------------------- */
+  /* LABEL ======================================= */
+  /* active state */
+  /* BOTTOM BARS ================================= */
+  /* active state */
+  /* HIGHLIGHTER ================================== */
+  /* active state */
+  /* ANIMATIONS ================ */ }
+  .post-input * {
+    box-sizing: border-box; }
+  .post-input input {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff; }
+    .post-input input:focus {
+      outline: none; }
+  .post-input label {
+    color: #fff;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all; }
+  .post-input input:focus ~ label, .post-input input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: #fff; }
+  .post-input .bar {
+    position: relative;
+    display: block;
+    width: 100%; }
+  .post-input .bar:before, .post-input .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    background: #CCD1D9;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all; }
+  .post-input .bar:before {
+    left: 50%; }
+  .post-input .bar:after {
+    right: 50%; }
+  .post-input input:focus ~ .bar:before, .post-input input:focus ~ .bar:after {
+    width: 50%; }
+  .post-input .highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5; }
+  .post-input input:focus ~ .highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease; }
+
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #5264AE; }
+  to {
+    width: 0;
+    background: transparent; } }
+
+@-moz-keyframes inputHighlighter {
+  from {
+    background: #5264AE; }
+  to {
+    width: 0;
+    background: transparent; } }
+
+@keyframes inputHighlighter {
+  from {
+    background: #5264AE; }
+  to {
+    width: 0;
+    background: transparent; } }

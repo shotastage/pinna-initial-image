@@ -25,14 +25,22 @@
             <p class="center desc">ユーザー名とパスワードを入力してください。</p>
         {% endif %}
 
-        <form class="auth-form" action="{% url 'login' %}" method="post" role="form">{% csrf_token %}
+        <form class="basic-form auth-form" action="{% url 'login' %}" method="post" role="form">{% csrf_token %}
             <p class="user">
-                <label for="id_username"></label>
-                <input id="id_username" class="form" type="text" placeholder="USER NAME" name="username" autofocus required/>
+				<div class="post-input">
+      				<input id="id_username" type="text" name="username" autofocus required>
+      				<span class="highlight"></span>
+      				<span class="bar"></span>
+      				<label for="id_username">USERNAME</label>
+    			</div>
             </p>
             <p class="pass">
-                <label for="id_password"></label>
-                <input id="id_password" class="form"  name="password" type="password" placeholder="PASSWORD" required/>
+                <div class="post-input">
+      				<input id="id_password" name="password" type="password" required />
+      				<span class="highlight"></span>
+      				<span class="bar"></span>
+      				<label for="id_password">USERNAME</label>
+    			</div>
             </p>
             <p class="submit">
                 <div class="login">
