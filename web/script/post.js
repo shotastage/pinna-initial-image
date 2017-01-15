@@ -1,64 +1,4 @@
 
-function getCurrentLocation() {
-
-    var lat;
-	var lng;
-
-
-    if ("geolocation" in navigator) {
-        navigator.geolocation.getCurrentPosition(
-            function(position) {
-			    // 取得したデータの整理
-			    var data = position.coords ;
-
-			    // データの整理
-			    lat = data.latitude ;
-			    lng = data.longitude ;
-			    var alt = data.altitude ;
-			    var accLatlng = data.accuracy ;
-			    var accAlt = data.altitudeAccuracy ;
-			    var heading = data.heading ;			//0=北,90=東,180=南,270=西
-			    var speed = data.speed ;
-	        },
-
-		    // [第2引数] 取得に失敗した場合の関数
-		    function(error) {
-			    var errorInfo = [
-				    "原因不明のエラーが発生しました…。" ,
-				    "位置情報の取得が許可されませんでした…。" ,
-				    "電波状況などで位置情報が取得できませんでした…。" ,
-				    "位置情報の取得に時間がかかり過ぎてタイムアウトしました…。"
-                ];
-
-			    // エラー番号
-			    var errorNo = error.code ;
-
-			    // エラーメッセージ
-			    var errorMessage = "[エラー番号: " + errorNo + "]\n" + errorInfo[ errorNo ];
-
-			    // アラート表示
-                alert(errorMessage);
-		    } ,
-
-		    // [第3引数] オプション
-		    {
-			    "enableHighAccuracy": false,
-			    "timeout": 8000,
-			    "maximumAge": 2000,
-		    }
-	    );
-    } else {
-        alert("Failed to get your location.\nPlease confirm settings or GPS modules.");
-    }
-
-    var position = {
-        latitude: lat,
-        altitude: lng
-    }
-
-    return position;
-}
-
 
 function allocate(str) {
     var type, style, embedded_frame;
@@ -96,6 +36,7 @@ function allocate(str) {
 
 
 document.getElementById("post_pin").addEventListener("click", function () {
+	document.getElementById("position").innerHTML = "Locating...";
     if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(
             function(position) {
@@ -106,7 +47,9 @@ document.getElementById("post_pin").addEventListener("click", function () {
 			    var lat = data.latitude ;
 			    var lng = data.longitude ;
 
-                 document.getElementById("position").innerHTML = "Your location: " + lat + ', ' + lng;
+				document.getElementById("lat").value = lat;
+				document.getElementById("lng").value = lng;
+                document.getElementById("position").innerHTML = "Your location: " + lat + ', ' + lng;
 	        },
 
 		    // [第2引数] 取得に失敗した場合の関数
@@ -115,7 +58,7 @@ document.getElementById("post_pin").addEventListener("click", function () {
 				    "原因不明のエラーが発生しました…。" ,
 				    "位置情報の取得が許可されませんでした…。" ,
 				    "電波状況などで位置情報が取得できませんでした…。" ,
-				    "位置情報の取得に時間がかかり過ぎてタイムアウトしました…。"
+				    "Timeout"
                 ];
 
 			    // エラー番号
@@ -125,7 +68,7 @@ document.getElementById("post_pin").addEventListener("click", function () {
 			    var errorMessage = "[エラー番号: " + errorNo + "]\n" + errorInfo[ errorNo ];
 
 			    // アラート表示
-                alert(errorMessage);
+                console.log(errorMessage);
 		    } ,
 
 		    // [第3引数] オプション
@@ -138,5 +81,4 @@ document.getElementById("post_pin").addEventListener("click", function () {
     } else {
         alert("Failed to get your location.\nPlease confirm settings or GPS modules.");
     }
-
 });

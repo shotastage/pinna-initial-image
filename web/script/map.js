@@ -124,22 +124,6 @@ setInterval(function () {
 
 
 
-// ズームクリック
-document.getElementById("map_plus").addEventListener("click", function () {
-  zoom = zoom + 1;
-  map.setZoom(zoom);
-}, false);
-// フェードクリック
-document.getElementById("map_minus").addEventListener("click", function () {
-  zoom = zoom - 1;
-  map.setZoom(zoom);
-}, false);
-
-
-
-
-
-
 
 
 // Gmap イニシャライザ
@@ -152,51 +136,4 @@ function initialize() {
         styles: mapStyle
     };
     map = new google.maps.Map(document.getElementById('map_canvas'), Options);
-}
-
-
-// ピン作成
-function createMapPin(lat, lng, pin_title) {
-  var LatLng = {
-    lat: lat,
-    lng: lng
-  };
-
-  map = new google.maps.Map(document.getElementById('map_canvas'), {
-    zoom: zoom
-  });
-
-  var marker = new google.maps.Marker({
-    position: LatLng,
-    map: map,
-    title: title
-  });
-
-
-  marker.setMap(map);
-}
-
-
-
-
-// ユーティリティ
-
-// 位置情報の取得
-
-
-
-// 対応ブラウザ判定
-function judgeBrowser() {
-  var ua = U;
-
-  var supported_browser_list = [
-    "chrome",
-    "safari",
-    "firefox"
-  ];
-
-  var none_supported_browser_list = [
-    ""
-  ];
-
 }

@@ -1,7 +1,7 @@
 from django.views import View
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-
+from yourmap.models import PostMedia
 
 
 class LandingView(View):
@@ -13,5 +13,7 @@ class LandingView(View):
 
     def post(self, request):
         post_pin = request.POST['post_pin']
+        lat = request.POST['lat']
+        lng = request.POST['lng']
         return render(request, 'index.html')
 
