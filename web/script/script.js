@@ -12,7 +12,7 @@ if ("geolocation" in navigator) {
 			var lng = data.longitude;
 
       latlng = new google.maps.LatLng(lat, lng);
-      initialize();
+      initialize(pins);
 	  },
 
 		// [第2引数] 取得に失敗した場合の関数
@@ -60,7 +60,7 @@ setInterval(function () {
 			  var lng = data.longitude;
 
         latlng = new google.maps.LatLng(lat, lng);
-        initialize();
+        initialize(pins);
 	    },
 
 		  // [第2引数] 取得に失敗した場合の関数
