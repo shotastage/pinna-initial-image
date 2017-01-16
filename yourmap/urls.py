@@ -16,9 +16,8 @@ Including another URLconf
 
 from django.conf.urls import include, url
 from django.contrib import admin
-from yourmap.view import LandingView
 
 urlpatterns = [
     url(r'^', include('account.urls')),
-    url(r'^', LandingView.as_view(), name='index'),
+    url(r'^', include('maps.urls')),
 ]

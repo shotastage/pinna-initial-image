@@ -1,7 +1,7 @@
 from django.views import View
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from yourmap.models import PostMedia
+from maps.models import PostMedia
 
 
 class LandingView(View):
