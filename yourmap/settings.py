@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'yourmap.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE':       'django.db.backends.postgresql',
-        'NAME':         'pinna',
-        'USER':         'shota',
-        'PASSWORD':     '',
-        'HOST':         'localhost',
+        'NAME':         'dcg1uphc580tvr',
+        'USER':         'dbsffqizovmbnk',
+        'PASSWORD':     'ac725ed2fa09281921614923b513ae295d84c6884dbc652993ebd5226d4cc21f',
+        'HOST':         'ec2-23-21-238-246.compute-1.amazonaws.com',
         'PORT':         '5432',
     }
 }
