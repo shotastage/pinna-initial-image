@@ -16,3 +16,4 @@ uWSGI==2.0.14
 uwsgitop==0.10
 whitenoise==3.2.2
 wrapt==1.10.8
+spotipy==2.4.4

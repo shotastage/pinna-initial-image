@@ -1,26 +1,3 @@
-// Mapオブジェクト
-var map;
-// デフォルトズーム
-var zoom = 15;
-// デフォルトの座標 35.658513, 139.701504
-var latlng = new google.maps.LatLng(35.658513, 139.701504);
-
-initialize();
-
-
-// Mapの初期化
-window.addEventListener('load', function () {
-  initialize();
-}, false);
-
-window.addEventListener('hashchange', function () {
-  initialize();
-}, false);
-
-
-
-
-
 
 
 // 現在地を取得しMapを更新
@@ -121,9 +98,6 @@ setInterval(function () {
 
 
 
-
-
-
 // ズームクリック
 document.getElementById("map_plus").addEventListener("click", function () {
   zoom = zoom + 1;
@@ -140,19 +114,19 @@ document.getElementById("map_minus").addEventListener("click", function () {
 
 
 
-
-
-// Gmap イニシャライザ
-function initialize() {
-    var Options = {
-        zoom: zoom, /*拡大比率*/
-        center: latlng, /*表示枠内の中心点*/
-        //mapTypeId: google.maps.MapTypeId.ROADMAP,/*表示タイプの指定*/
-        disableDefaultUI: true, /* デフォルトのUIを無効化 */
-        styles: mapStyle
-    };
-    map = new google.maps.Map(document.getElementById('map_canvas'), Options);
-}
+// マーカーのインスタンスを作成する
+var marker = new google.maps.Marker( {
+	map: map ,	// 地図
+	position: new google.maps.LatLng( 35.792621, 139.806513 ) ,	// 位置座標
+	icon: "./marker.png" ,	// マーカー画像
+	clickable: true ,	// クリック
+	crossOnDrag: true ,	// ドラッグ操作中の十字マーク
+	draggable: true ,	// ドラッグ操作
+	label: "●" ,	// ラベル
+	opacity: false ,	// 不透明度
+	title: "SYNCER" ,	// タイトル (ツールチップの内容)
+	visible: true ,	// 表示状態
+});
 
 
 // ピン作成
@@ -171,7 +145,6 @@ function createMapPin(lat, lng, pin_title) {
     map: map,
     title: title
   });
-
 
   marker.setMap(map);
 }
@@ -198,5 +171,4 @@ function judgeBrowser() {
   var none_supported_browser_list = [
     ""
   ];
-
 }

@@ -6,4 +6,3 @@ class PostMedia(models.Model):
     post_url = models.CharField(max_length=200)
     lat = models.CharField(max_length=200)
     lng = models.CharField(max_length=200)
-
