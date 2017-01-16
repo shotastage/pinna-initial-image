@@ -20,9 +20,6 @@ class LandingView(View):
             for db in PostMedia.objects.all():
                 i = 0
                 pins = 'pins['i'] = {' + 'name: "' + db.post_url + '",' + 'lat: ' + db.lat + ', lng:' + db.lng + '}'
-                            lng: 139.701504
-                        },
-
                 i = i + 1
 
             return render(request, 'index.html', {'pins': pins})
