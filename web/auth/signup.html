@@ -36,21 +36,33 @@
             {% endif %}
         {% endif %}
 
-        <form class="auth-form" action="{% url 'signup' %}" method="post" role="form">{% csrf_token %}
-            <p class="mail">
-                <label for="id_email">
-                <input class="form" type="email" name="email" placeholder="Eメール" autofocus required/>
+        <form class="basic-form auth-form" action="{% url 'login' %}" method="post" role="form">{% csrf_token %}
+            <p class="main">
+				<div class="post-input">
+      				<input id="id_email" type="text" name="email" autofocus required>
+      				<span class="highlight"></span>
+      				<span class="bar"></span>
+      				<label for="id_email">EMAIL</label>
+    			</div>
             </p>
-            <p class="user">
-                <label for="id_username">
-                <input class="form" type="username" name="username" placeholder="ユーザー名" required/>
+            <p class="main">
+				<div class="post-input">
+      				<input id="id_username" type="text" name="username" autofocus required>
+      				<span class="highlight"></span>
+      				<span class="bar"></span>
+      				<label for="id_username">USERNAME</label>
+    			</div>
             </p>
             <p class="pass">
-                <label for="id_password">
-                <input class="form" type="password" name="password" placeholder="パスワード" required/>
+                <div class="post-input">
+      				<input id="id_password" name="password" type="password" required />
+      				<span class="highlight"></span>
+      				<span class="bar"></span>
+      				<label for="id_password">PASSWORD</label>
+    			</div>
             </p>
             <p class="submit">
-	            <div class="signup-btn">
+                <div class="signup">
                     <button type="submit" class="btn second start">REGISTER</button>
                 </div>
             </p>
