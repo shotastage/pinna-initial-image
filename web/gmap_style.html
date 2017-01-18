@@ -23,6 +23,7 @@
     top: 0;
   }
 </style>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA32MTfuMesMcdn8CyF4wjcdizPKbqUdVg" async defer></script>
 <script src="{% static 'script/mapstyle.js' %}"></script>
 <script src="{% static 'script/pins.js' %}"></script>
 <script>
@@ -31,5 +32,4 @@
   {% endfor %}
 </script>
 <script src="{% static 'script/map.js' %}"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA32MTfuMesMcdn8CyF4wjcdizPKbqUdVg&callback=initialize(pins)" async defer></script>
 {% endblock %}
