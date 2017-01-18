@@ -93,7 +93,7 @@ setInterval(function () {
     alert("Failed to get your location.\nPlease confirm settings or GPS modules.");
   }
 
-}, 10000);
+}, 15000);
 
 
 
