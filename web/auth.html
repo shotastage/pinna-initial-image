@@ -10,7 +10,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Google Map -->
-    <script src="https://maps.google.com/maps/api/js?sensor=true" async></script>
+    {% include 'gmap_style.html'%}
 </head>
 <body>
 
@@ -39,7 +39,7 @@
       				<input id="id_password" name="password" type="password" required />
       				<span class="highlight"></span>
       				<span class="bar"></span>
-      				<label for="id_password">USERNAME</label>
+      				<label for="id_password">PASSWORD</label>
     			</div>
             </p>
             <p class="submit">
