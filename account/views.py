@@ -11,8 +11,10 @@ VALID = Validation()
 class Signup(View):
     """ Signup View Controller """
     def get(self, request):
-        """ Serve signup view """
-        return render(request, 'auth/signup.html')
+        if request.user.is_authenticated:
+            return HttpResponseRedirect('/login/')
+        else:
+            return render(request, 'auth/signup.html')
 
     def post(self, request):
         """ Serve signup method """
@@ -73,4 +75,3 @@ class Signup(View):
             user = User.objects.create_user(username, email, password)
             user.save()
             return HttpResponseRedirect('/login/')
-
