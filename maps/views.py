@@ -4,9 +4,6 @@ from django.http import HttpResponseRedirect
 from maps.models import PostMedia
 import spotipy
 
-# For debug
-from pprint import pprint
-
 
 
 # Create an Spotipy instance
@@ -16,11 +13,13 @@ spotify = spotipy.Spotify()
 
 class LandingView(View):
     def get(self, request):
+        pins = []
+        count = 0
         if request.user.is_authenticated:
             for db in PostMedia.objects.all():
-                i = 0
-                pins = 'pins['i'] = {' + 'name: "' + db.post_url + '",' + 'lat: ' + db.lat + ', lng:' + db.lng + '}'
-                i = i + 1
+                pins.append('pins[' + str(count) + '] = {' + 'name:"' + str(db.post_url) + '",' + 'lat: ' + db.lat + ', lng:' + db.lng + '}')
+                count += 1
+
 
             return render(request, 'index.html', {'pins': pins})
         else:
@@ -28,8 +27,8 @@ class LandingView(View):
 
     def post(self, request):
         post_pin = request.POST['post_pin']
-        lat      = request.POST['lat']
-        lng      = request.POST['lng']
+        lat = request.POST['lat']
+        lng = request.POST['lng']
 
         if 'youtube' in post_pin:
             type = "youtube"
@@ -47,4 +46,12 @@ class LandingView(View):
             lng = lng,
         )
         post_info.save()
-        return render(request, 'index.html')
+
+
+        pins = []
+        count = 0
+        for db in PostMedia.objects.all():
+            pins.append('pins[' + str(count) + '] = {' + 'name:"' + str(db.post_url) + '",' + 'lat: ' + db.lat + ', lng:' + db.lng + '}')
+            count += 1
+
+        return render(request, 'index.html', {'pins': pins})

@@ -10,9 +10,10 @@ var maker = [];
 
 
 
+
 // Gmap イニシャライザ
 function initialize(data) {
-    var pins = data;
+    var pin_list = data;
 
     var Options = {
         zoom: zoom, /*拡大比率*/
@@ -24,10 +25,10 @@ function initialize(data) {
 
     map = new google.maps.Map(document.getElementById('map_canvas'), Options);
 
-    for (var i = 0; i < data.length; i++) {
+    for (var i = 0; i < pin_list.length; i++) {
         PinLatLng = {
-            lat: data[i]['lat'],
-            lng: data[i]['lng']
+            lat: pin_list[i]['lat'],
+            lng: pin_list[i]['lng']
         };
         maker[i] = new google.maps.Marker({
             position: PinLatLng,
@@ -50,4 +51,3 @@ window.onload = function () {
 document.getElementsByTagName("body")[0].addEventListener('onpageshow', function () {
 	initialize(pins);
 }, false);
-
