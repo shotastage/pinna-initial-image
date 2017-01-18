@@ -25,7 +25,7 @@ SECRET_KEY = '6rr=pbx$+52_3vo8o34q+74u&@%2%2dp7^f*ujl86i936z!%w!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*", ".herokuapp.com"]
 
 
 # Application definition
@@ -126,6 +126,16 @@ USE_TZ = True
 
 STATIC_URL = '/contents/'
 
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# Extra places for collectstatic to find static files.
 STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, 'web'),
+    os.path.join(BASE_DIR, 'web'),
+]
+# Simplified static file serving.
+# https://warehouse.python.org/project/whitenoise/
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'web'),
 ]
