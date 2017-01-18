@@ -36,7 +36,7 @@
             {% endif %}
         {% endif %}
 
-        <form class="basic-form auth-form" action="{% url 'login' %}" method="post" role="form">{% csrf_token %}
+        <form class="basic-form auth-form" action="{% url 'signup' %}" method="post" role="form">{% csrf_token %}
             <p class="main">
 				<div class="post-input">
       				<input id="id_email" type="text" name="email" autofocus required>
