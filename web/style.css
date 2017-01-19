@@ -548,6 +548,10 @@ template {
   margin: auto;
   width: 40%; }
 
+@media screen and (max-width: 480px) {
+  .auth-form {
+    width: 70%; } }
+
 .landing-contents {
   position: absolute;
   display: flex;
@@ -567,6 +571,7 @@ template {
   font-weight: 100;
   font-family: 'Monoton', cursive;
   margin: 7px;
+  width: 100%;
   margin-top: 80px; }
 
 .landing-description {
@@ -574,6 +579,11 @@ template {
   text-align: center;
   color: #fff;
   font-size: 20px; }
+
+@media screen and (max-width: 480px) {
+  .landing-title {
+    font-size: 85px;
+    font-weight: 100; } }
 
 /* General Demo Style */
 .pinna-modal {
@@ -868,9 +878,9 @@ button {
   /* active state */
   /* BOTTOM BARS ================================= */
   /* active state */
-  /* HIGHLIGHTER ================================== */
+  /* Highlighter ================================== */
   /* active state */
-  /* ANIMATIONS ================ */ }
+  /* Animations */ }
   .post-input * {
     box-sizing: border-box; }
   .post-input input {
@@ -919,6 +929,13 @@ button {
     right: 50%; }
   .post-input input:focus ~ .bar:before, .post-input input:focus ~ .bar:after {
     width: 50%; }
+  @media screen and (max-width: 480px) {
+    .post-input input:focus ~ .bar:before, .post-input input:focus ~ .bar:after {
+      width: 80%; }
+    .post-input .bar:before {
+      left: 20%; }
+    .post-input .bar:after {
+      right: 20%; } }
   .post-input .highlight {
     position: absolute;
     height: 60%;

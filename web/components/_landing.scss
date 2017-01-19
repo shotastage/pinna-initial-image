@@ -19,12 +19,23 @@
     font-weight: 100;
     font-family: 'Monoton', cursive;
     margin: 7px;
+    width: 100%;
     margin-top: 80px;
 }
+
 
 .landing-description {
     position: relative;
     text-align: center;
     color: #fff;
     font-size: 20px;
+}
+
+
+
+@media screen and (max-width: 480px) {
+    .landing-title {
+        font-size: 85px;
+        font-weight: 100;
+    }
 }

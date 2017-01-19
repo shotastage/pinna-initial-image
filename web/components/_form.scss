@@ -5,3 +5,10 @@
     margin: auto;
     width: 40%;
 }
+
+
+@media screen and (max-width: 480px) {
+    .auth-form {
+        width: 70%;
+    }
+}
