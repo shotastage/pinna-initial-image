@@ -663,9 +663,12 @@ template {
     transform: translateX(-50%) translateY(-50%); }
   @media screen and (max-width: 480px) {
     .pinna-modal .md-modal {
+      top: 0;
       width: 100vw;
       height: 100vh;
-      border-radius: 0; } }
+      border-radius: 0; }
+    .pinna-modal .md-effect-14.md-modal {
+      top: 60%; } }
   .pinna-modal .md-show {
     visibility: visible; }
   .pinna-modal .md-overlay {

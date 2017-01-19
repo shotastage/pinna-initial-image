@@ -128,9 +128,13 @@ $modal-bg-color: #fff;
 
 	@media screen and (max-width: 480px) {
 		.md-modal {
+			top: 0;
 			width: 100vw;
 			height: 100vh;
 			border-radius: 0;
+		}
+		.md-effect-14.md-modal {
+			top: 60%;
 		}
 	}
 
