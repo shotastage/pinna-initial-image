@@ -32,7 +32,7 @@ class LandingView(View):
 
     def post(self, request):
 
-
+        error = "None"
         """ Post variables """
         post_pin = request.POST['post_pin']
         lat = request.POST['lat']
@@ -58,7 +58,7 @@ class LandingView(View):
                 is_lng = db.lng
 
             if url == post_pin and lat == is_lat and lng == is_lng:
-                pass
+                error = "double"
             else:
                 post_info = PostMedia(
                     post_type = type,
@@ -67,7 +67,6 @@ class LandingView(View):
                     lng = lng,
                 )
                 post_info.save()
-                error = "None"
 
 
         pins = []
