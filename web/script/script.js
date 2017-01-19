@@ -111,3 +111,12 @@ document.getElementById("map_minus").addEventListener("click", function () {
   zoom = zoom - 1;
   map.setZoom(zoom);
 }, false);
+
+document.getElementById("logout").addEventListener("click", function () {
+	if (window.localStorage) {
+		window.localStorage.setItem(login_status, true);
+    location.href = "/login/";
+	} else {
+		location.href = "/logout/";
+	}
+}, false);
