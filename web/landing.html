@@ -27,5 +27,8 @@
     {% include 'script.html'%}
     <script>
         zoom = 16;
+        if (window.localStorage.getItem(login_status)) {
+            location.href = "/";
+        }
     </script>
 </body>
