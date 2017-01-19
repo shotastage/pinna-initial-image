@@ -58,7 +58,7 @@ class LandingView(View):
                 is_lng = db.lng
 
             if url == post_pin and lat == is_lat and lng == is_lng:
-                error == "invalid"
+                pass
             else:
                 post_info = PostMedia(
                     post_type = type,
