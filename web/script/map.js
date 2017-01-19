@@ -44,10 +44,12 @@ function init(arg) {
             };
 
             (function(m) {
-                maker[m] = new google.maps.Marker({
-                    position: PinLatLng,
-                    map: map
-                });
+                if (!type.match("other")) {
+                        maker[m] = new google.maps.Marker({
+                        position: PinLatLng,
+                        map: map
+                    });
+                }
             })(n);
 
             (function(m) {

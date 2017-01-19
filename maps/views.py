@@ -9,7 +9,7 @@ import spotipy
 
 # Create an Spotipy instance
 spotify = spotipy.Spotify()
-
+validation = Validation()
 
 
 class LandingView(View):
@@ -32,7 +32,6 @@ class LandingView(View):
 
     def post(self, request):
 
-        validation = Validation()
 
         """ Post variables """
         post_pin = request.POST['post_pin']
