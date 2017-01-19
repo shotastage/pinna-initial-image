@@ -60,10 +60,14 @@ document.getElementById("map_minus").addEventListener("click", function () {
 }, false);
 
 document.getElementById("logout").addEventListener("click", function () {
-	if (window.localStorage) {
-		window.localStorage.setItem("login_status", true);
-    window.location.href = "/login/";
-	} else {
-		window.location.href = "/logout/";
-	}
+		setTimeout(logout, 1000);
+
+		function logout() {
+			if (window.localStorage) {
+				window.localStorage.setItem("login_status", true);
+   	 		window.location.href = "/login/";
+			} else {
+				window.location.href = "/logout/";
+			}
+		}
 }, false);
