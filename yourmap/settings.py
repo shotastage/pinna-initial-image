@@ -128,6 +128,11 @@ STATIC_URL = '/contents/'
 
 
 
+LOGIN_REDIRECT_URL = '/'
+
+
+
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'statics')
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = [
