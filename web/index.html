@@ -11,6 +11,13 @@
 	{% include 'gmap_style.html'%}
 </head>
 <body>
+	{% if error == "Empty" %}
+    	<script>
+			alert("位置情報の取得が完了していません。");
+		</script>
+	{% endif %}
+
+
 
     <div class="md-overlay"></div>
     <!-- Modal -->
