@@ -577,7 +577,7 @@ template {
 .pinna-modal {
   /* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
   /* General styles for the modal */
-  /* 
+  /*
 	Styles for the html/body for special modal where we want 3d effects
 	Note that we need a container wrapping all content on the page for the
 	perspective effects (not including the modals and the overlay).
@@ -661,6 +661,11 @@ template {
     -moz-transform: translateX(-50%) translateY(-50%);
     -ms-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%); }
+  @media screen and (max-width: 480px) {
+    .pinna-modal .md-modal {
+      width: 100vw;
+      height: 100vh;
+      border-radius: 0; } }
   .pinna-modal .md-show {
     visibility: visible; }
   .pinna-modal .md-overlay {
