@@ -19,7 +19,7 @@ class LandingView(View):
         if request.user.is_authenticated:
             for db in PostMedia.objects.all():
                 createArray = 'var pins = new Array(' + str(len(PostMedia.objects.all())) + ');'
-                pins.append('pins[' + str(count) + '] = {' + 'name:"' + str(db.post_url) + '",' + 'lat: ' + db.lat + ', lng:' + db.lng + '};')
+                pins.append('pins[' + str(count) + '] = {' + 'name:"' + str(db.post_url) + '", type: "' + str(db.post_type) + '", lat: ' + db.lat + ', lng:' + db.lng + '};')
                 count += 1
             error = "None"
 
@@ -50,7 +50,7 @@ class LandingView(View):
             type="other"
 
 
-        if validation.empty(lat) and validation.empty(lng):
+        if validation.empty(lat) and validation.empty(lng) and validation.empty(post_pin):
             error = "Empty"
         else:
             post_info = PostMedia(
@@ -67,7 +67,7 @@ class LandingView(View):
         count = 0
         for db in PostMedia.objects.all():
             createArray = 'var pins = new Array(' + str(len(PostMedia.objects.all())) + ');'
-            pins.append('pins[' + str(count) + '] = {' + 'name:"' + str(db.post_url) + '",' + 'lat: ' + db.lat + ', lng:' + db.lng + '};')
+            pins.append('pins[' + str(count) + '] = {' + 'name:"' + str(db.post_url) + '", type: "' + str(db.post_type) + '", lat: ' + db.lat + ', lng:' + db.lng + '};')
             count += 1
 
         return render(request, 'index.html', {'pins': pins, 'array_declaration': createArray, 'error': error})

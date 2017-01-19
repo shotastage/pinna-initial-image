@@ -27,7 +27,7 @@
 			<div class="md-content">
 				<h3>CREATE A PIN</h3>
 				<div>
-					<p style="text-align: center;"><strong>音楽やYouTube動画のタイトルまたはURLを入力してください。</strong></p>
+					<p style="text-align: center;"><strong>YouTube動画またはSpotifyのURLを入力してください。</strong></p>
 					<form method="post">{% csrf_token %}
 					<ul>
 						<div class="input-margin"></div>
@@ -52,14 +52,14 @@
 			<div class="md-content md-content-blue">
 				<h3>SEARCH YOUR WANTED PIN</h3>
 				<div>
-					<p><strong>SEARCH BY SPOT NAME OR KEYWORDS</strong></p>
+					<p><strong>SEARCH URL</strong></p>
 					<ul>
 						<div class="input-margin"></div>
 						<form class="post-input">
       						<input type="text" method="post" required>
       						<span class="highlight"></span>
       						<span class="bar"></span>
-      						<label>SPOT</label>
+      						<label>URL</label>
     					</form>
 					</ul>
 					<button class="md-close">SEARCH</button>
@@ -88,7 +88,7 @@
 
 		<div class="md-modal md-effect-14" id="modal-4">
 			<div class="md-content md-content-blue">
-				<h3>VIDEO</h3>
+				<h3>PLAYER</h3>
 				<div>
 					<ul id="insert-area">
 						<div id="player"></div>
