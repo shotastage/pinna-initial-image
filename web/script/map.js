@@ -40,9 +40,9 @@ function init(arg) {
         });
         listener[i] = google.maps.event.addListener(maker[i], "click", function () {
             if (name.match("youtu.be")) {
-                var video_id = name.split("https://youtu.be/")[0];
+                var video_id = name.split("https://youtu.be/")[1];
             } else if (name.match("youtube.com")) {
-                var video_id = name.split("https://www.youtube.com/watch?v=")[0];
+                var video_id = name.split("https://www.youtube.com/watch?v=")[1];
             }
             var html = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + video_id +'" frameborder="0" allowfullscreen></iframe>';
             document.getElementById("insert-area").innerHTML = html;
