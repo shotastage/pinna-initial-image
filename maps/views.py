@@ -17,11 +17,12 @@ class LandingView(View):
         count = 0
         if request.user.is_authenticated:
             for db in PostMedia.objects.all():
-                pins.append('pins[' + str(count) + '] = {' + 'name:"' + str(db.post_url) + '",' + 'lat: ' + db.lat + ', lng:' + db.lng + '}')
+                createArray = 'var pins = new Array(' + str(len(PostMedia.objects.all())) + ');'
+                pins.append('pins[' + str(count) + '] = {' + 'name:"' + str(db.post_url) + '",' + 'lat: ' + db.lat + ', lng:' + db.lng + '};')
                 count += 1
 
 
-            return render(request, 'index.html', {'pins': pins})
+            return render(request, 'index.html', {'pins': pins, 'array_declaration': createArray})
         else:
             return render(request, 'landing.html')
 
@@ -52,7 +53,8 @@ class LandingView(View):
         pins = []
         count = 0
         for db in PostMedia.objects.all():
-            pins.append('pins[' + str(count) + '] = {' + 'name:"' + str(db.post_url) + '",' + 'lat: ' + db.lat + ', lng:' + db.lng + '}')
+            createArray = 'var pins = new Array(' + str(len(PostMedia.objects.all())) + ');'
+            pins.append('pins[' + str(count) + '] = {' + 'name:"' + str(db.post_url) + '",' + 'lat: ' + db.lat + ', lng:' + db.lng + '};')
             count += 1
 
-        return render(request, 'index.html', {'pins': pins})
+        return render(request, 'index.html', {'pins': pins, 'array_declaration': createArray})

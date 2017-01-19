@@ -25,8 +25,8 @@
 </style>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA32MTfuMesMcdn8CyF4wjcdizPKbqUdVg" async defer></script>
 <script src="{% static 'script/mapstyle.js' %}"></script>
-<script src="{% static 'script/pins.js' %}"></script>
 <script>
+  {{ array_declaration | safe }}
   {% for pin in pins %}
 		{{ pin | safe}}
   {% endfor %}

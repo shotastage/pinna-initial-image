@@ -1,10 +1,9 @@
 
 
-// 現在地を取得しMapを更新
 if ("geolocation" in navigator) {
-  navigator.geolocation.getCurrentPosition(
-    function(position) {
-		  // 取得したデータの整理
+	navigator.geolocation.getCurrentPosition(
+  	function(position) {
+			// 取得したデータの整理
 			var data = position.coords ;
 
 			// データの整理
@@ -12,7 +11,8 @@ if ("geolocation" in navigator) {
 			var lng = data.longitude;
 
       latlng = new google.maps.LatLng(lat, lng);
-      initialize(pins);
+      //initialize(pins);
+			init(pins);
 	  },
 
 		// [第2引数] 取得に失敗した場合の関数
@@ -46,6 +46,8 @@ if ("geolocation" in navigator) {
 }
 
 
+
+/*
 setInterval(function () {
   var lat, lng;
 
@@ -60,7 +62,8 @@ setInterval(function () {
 			  var lng = data.longitude;
 
         latlng = new google.maps.LatLng(lat, lng);
-        initialize(pins);
+        //initialize(pins);
+				 init(pins);
 	    },
 
 		  // [第2引数] 取得に失敗した場合の関数
@@ -93,7 +96,7 @@ setInterval(function () {
     alert("Failed to get your location.\nPlease confirm settings or GPS modules.");
   }
 
-}, 15000);
+}, 15000);*/
 
 
 
@@ -108,32 +111,3 @@ document.getElementById("map_minus").addEventListener("click", function () {
   zoom = zoom - 1;
   map.setZoom(zoom);
 }, false);
-
-
-
-for (var i = 0; i <= maker.length; i++ ) {
-	maker[i].addListener('click', function () {
-		alert(クリック);
-	}, false);
-}
-
-// ユーティリティ
-
-// 位置情報の取得
-
-
-
-// 対応ブラウザ判定
-function judgeBrowser() {
-  var ua = U;
-
-  var supported_browser_list = [
-    "chrome",
-    "safari",
-    "firefox"
-  ];
-
-  var none_supported_browser_list = [
-    ""
-  ];
-}
