@@ -30,6 +30,7 @@ class LandingView(View):
         lat = request.POST['lat']
         lng = request.POST['lng']
 
+
         if 'youtube' in post_pin:
             type = "youtube"
         elif 'spotify' in post_pin:

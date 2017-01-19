@@ -111,46 +111,11 @@ document.getElementById("map_minus").addEventListener("click", function () {
 
 
 
-
-
-
-// マーカーのインスタンスを作成する
-var marker = new google.maps.Marker( {
-	map: map ,	// 地図
-	position: new google.maps.LatLng( 35.792621, 139.806513 ) ,	// 位置座標
-	icon: "./marker.png" ,	// マーカー画像
-	clickable: true ,	// クリック
-	crossOnDrag: true ,	// ドラッグ操作中の十字マーク
-	draggable: true ,	// ドラッグ操作
-	label: "●" ,	// ラベル
-	opacity: false ,	// 不透明度
-	title: "SYNCER" ,	// タイトル (ツールチップの内容)
-	visible: true ,	// 表示状態
-});
-
-
-// ピン作成
-function createMapPin(lat, lng, pin_title) {
-  var LatLng = {
-    lat: lat,
-    lng: lng
-  };
-
-  map = new google.maps.Map(document.getElementById('map_canvas'), {
-    zoom: zoom
-  });
-
-  var marker = new google.maps.Marker({
-    position: LatLng,
-    map: map,
-    title: title
-  });
-
-  marker.setMap(map);
+for (var i = 0; i <= maker.length; i++ ) {
+	maker[i].addListener('click', function () {
+		alert(クリック);
+	}, false);
 }
-
-
-
 
 // ユーティリティ
 
