@@ -115,8 +115,8 @@ document.getElementById("map_minus").addEventListener("click", function () {
 document.getElementById("logout").addEventListener("click", function () {
 	if (window.localStorage) {
 		window.localStorage.setItem(login_status, true);
-    location.href = "/login/";
+    window.location.href = "/login/";
 	} else {
-		location.href = "/logout/";
+		window.location.href = "/logout/";
 	}
 }, false);
