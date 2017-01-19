@@ -505,6 +505,12 @@ template {
   left: 0;
   bottom: 100px; }
 
+.signup {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 100px; }
+
 .signup-btn {
   position: absolute;
   right: 0;
@@ -578,7 +584,8 @@ template {
 	*/
   /* Content styles */
   /* Individual modal styles with animations/transitions */
-  /* Effect 7:  slide and stick to top */ }
+  /* Effect 7:  slide and stick to top */
+  /* Effect 14:  3D Rotate from bottom */ }
   .pinna-modal *, .pinna-modal *:after, .pinna-modal *:before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -730,6 +737,34 @@ template {
     transform: translateY(0%);
     border-radius: 0 0 3px 3px;
     opacity: 1; }
+  .pinna-modal .md-effect-14.md-modal {
+    -webkit-perspective: 1300px;
+    -moz-perspective: 1300px;
+    perspective: 1300px; }
+  .pinna-modal .md-effect-14 .md-content {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: translateY(100%) rotateX(90deg);
+    -moz-transform: translateY(100%) rotateX(90deg);
+    -ms-transform: translateY(100%) rotateX(90deg);
+    transform: translateY(100%) rotateX(90deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; }
+  .pinna-modal .md-show.md-effect-14 .md-content {
+    -webkit-transform: translateY(0%) rotateX(0deg);
+    -moz-transform: translateY(0%) rotateX(0deg);
+    -ms-transform: translateY(0%) rotateX(0deg);
+    transform: translateY(0%) rotateX(0deg);
+    opacity: 1; }
+
+.popup-modal {
+  z-index: 2000; }
 
 button {
   background-color: transparent;

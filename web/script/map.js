@@ -29,6 +29,7 @@ function init(arg) {
     for (var i = 0; i < arg.length; i++) {
         var lat = arg[i]['lat'];
         var lng = arg[i]['lng'];
+        var name = arg[i]['name'];
         var PinLatLng = {
             lat: lat,
             lng: lng
@@ -38,7 +39,14 @@ function init(arg) {
             map: map
         });
         listener[i] = google.maps.event.addListener(maker[i], "click", function () {
-            alert("CLICK");
+            if (name.match("youtu.be")) {
+                var video_id = name.split("https://youtu.be/")[0];
+            } else if (name.match("youtube.com")) {
+                var video_id = name.split("https://www.youtube.com/watch?v=")[0];
+            }
+            var html = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + video_id +'" frameborder="0" allowfullscreen></iframe>';
+            document.getElementById("insert-area").innerHTML = html;
+            document.getElementById("popup-trigger").click();
         });
     }
 }
