@@ -39,3 +39,9 @@
         font-weight: 100;
     }
 }
+
+@media screen and (max-width: 320px) {
+    .landing-title {
+        font-size: 67px;
+    }
+}

@@ -548,6 +548,9 @@ template {
   margin: auto;
   width: 40%; }
 
+.signup-form {
+  top: 200px; }
+
 @media screen and (max-width: 480px) {
   .auth-form {
     width: 70%; } }
@@ -584,6 +587,10 @@ template {
   .landing-title {
     font-size: 85px;
     font-weight: 100; } }
+
+@media screen and (max-width: 320px) {
+  .landing-title {
+    font-size: 67px; } }
 
 /* General Demo Style */
 .pinna-modal {
@@ -820,6 +827,9 @@ button {
     height: 61px;
     box-shadow: 0 0 0 transparent;
     letter-spacing: 5px; }
+
+@media screen and (max-width: 320px) {
+  width: 400px; }
 
 .primary {
   background: #4FC1E9;
