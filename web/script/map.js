@@ -63,7 +63,7 @@ function init(arg) {
                         } else if (name.match("youtube.com")) {
                             video_id[m] = name.split("https://www.youtube.com/watch?v=")[1];
                         }
-                        html[m] = '<iframe width="100%" height="315" src="https://www.youtube.com/embed/' + video_id[m] +'" frameborder="0" allowfullscreen></iframe>';
+                        html[m] = '<iframe width="100%" class="youtube_frame" src="https://www.youtube.com/embed/' + video_id[m] +'" frameborder="0" allowfullscreen></iframe>';
                         if (insert_area.hasChildNodes) {
                             document.getElementById("insert-area").removeChild(insert_area.childNodes[0]);
                         }

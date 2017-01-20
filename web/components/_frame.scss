@@ -1,0 +1,9 @@
+.youtube_frame {
+    height: 315;
+}
+
+@media screen and (max-width: 320px) {
+    .youtube_frame {
+        height: 270;
+    }
+}
