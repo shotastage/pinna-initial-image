@@ -45,6 +45,8 @@ class LandingView(View):
             type = "spotify"
         elif 'youtu.be' in post_pin:
             type= "youtube"
+        elif 'itun.es' in post_pin:
+            type = "apple_music"
         else:
             type="other"
 
