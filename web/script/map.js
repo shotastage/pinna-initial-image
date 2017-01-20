@@ -16,6 +16,7 @@ var listener = [];
 // YouTube Video ID
 var video_id = [];
 var song_id = [];
+var am_id = [];
 
 
 
@@ -78,8 +79,8 @@ function init(arg) {
                         document.getElementById("insert-area").innerHTML = html[m];
                         document.getElementById("popup-trigger").click();
                     } else if (type.match("apple_music")) {
-                        song_id[m] = name.split("=")[1];
-                        html[m] = '<iframe src="//tools.applemusic.com/embed/v1/song/' + song_id[m] + '?country=jp" height="110px" width="100%" frameborder="0"></iframe>';
+                        am_id[m] = name.split("=")[1];
+                        html[m] = '<iframe src="//tools.applemusic.com/embed/v1/song/' + am_id[m] + '?country=jp" height="110px" width="100%" frameborder="0"></iframe>';
                         if (insert_area.hasChildNodes) {
                             document.getElementById("insert-area").removeChild(insert_area.childNodes[0]);
                         }
