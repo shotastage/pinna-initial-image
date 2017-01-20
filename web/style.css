@@ -828,9 +828,6 @@ button {
     box-shadow: 0 0 0 transparent;
     letter-spacing: 5px; }
 
-@media screen and (max-width: 320px) {
-  width: 400px; }
-
 .primary {
   background: #4FC1E9;
   box-shadow: 0 3px 0 #43afd5; }
@@ -861,6 +858,10 @@ button {
     top: 0;
     left: 0;
     text-align: center; } }
+
+@media screen and (max-width: 320px) {
+  .cubic-btn {
+    width: 60%; } }
 
 .btn-map-area {
   display: flex;
