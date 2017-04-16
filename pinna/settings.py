@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'yourmap.wsgi.application'
+WSGI_APPLICATION = 'pinna.wsgi.application'
 
 
 # Database

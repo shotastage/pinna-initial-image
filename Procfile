@@ -1,1 +1,1 @@
-web: gunicorn yourmap.wsgi
+web: gunicorn pinna.wsgi
