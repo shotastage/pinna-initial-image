@@ -71,3 +71,11 @@ document.getElementById("logout").addEventListener("click", function () {
 			}
 		}
 }, false);
+
+
+var currentUrl = location.href
+if (currentUrl.indexOf('http:') >= 0) {
+  var newUrl = currentUrl.replace('http:', 'https:');
+
+  location.replace(newUrl);
+}

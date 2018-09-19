@@ -1,5 +1,4 @@
 
-
 function allocate(str) {
     var type, style, embedded_frame;
 
