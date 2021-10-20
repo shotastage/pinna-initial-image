@@ -78,11 +78,11 @@ WSGI_APPLICATION = 'pinna.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE':       'django.db.backends.postgresql',
-        'NAME':         'd4f7i7gcglfq8i',
-        'USER':         'bpdpscgdudhodd',
-        'PASSWORD':     '0922d2a06cc42b30ab592e0b872a3ea57c31d9653456f438ed855d7f31a1ecb7',
-        'HOST':         'ec2-23-21-224-199.compute-1.amazonaws.com',
-        'PORT':         '5432',
+        'NAME':         os.environ['DB_NAME'],
+        'USER':         os.environ['DB_USER'],
+        'PASSWORD':     os.environ['DB_PASS'],
+        'HOST':         os.environ['DB_HOST'],
+        'PORT':         os.environ['DB_PORT'],
     }
 }
 
